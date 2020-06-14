@@ -1,9 +1,9 @@
 <h1> <%= @episode.name%></h1>
 <br>
 <br>
-<h2> Song: <%= @episode.song.name %></h2>
+<h2> Song:  <%= link_to @episode.song.name, @episode.song %>  </h2>
 <br>
 <br>
  
- <h2>Show: <%= @episode.show.name %></h2>
+ <h2>Show: <%= link_to @episode.show.name, @episode.show %></h2>
  
