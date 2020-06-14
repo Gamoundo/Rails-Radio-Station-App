@@ -8,6 +8,6 @@ class ShowsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
+    @show = Show.find(params[:id])
   end
 end
