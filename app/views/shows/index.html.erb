@@ -1,2 +1,9 @@
-<h1>Shows#index</h1>
-<p>Find me in app/views/shows/index.html.erb</p>
+<h1>Radio Station's Show lineup</h1>
+<br>
+
+<ul>
+    <% @shows.each do |show| %>
+        <li><%= link_to show.name, song_path(show)%></li>
+        <br>
+    <%end%>
+</ul>
