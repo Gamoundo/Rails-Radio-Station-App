@@ -14,7 +14,7 @@ class EpisodesController < ApplicationController
   end
 
   def create
-   @episode.Episode.create(episode_params)
+   @episode = Episode.create(episode_params)
    redirect_to episodes_path(@episode)
   end
 
