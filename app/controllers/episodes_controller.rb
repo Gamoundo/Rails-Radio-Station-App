@@ -15,6 +15,7 @@ class EpisodesController < ApplicationController
 
   def create
    @episode = Episode.create(episode_params)
+   @episode.save
    redirect_to episodes_path(@episode)
   end
 
@@ -22,6 +23,9 @@ class EpisodesController < ApplicationController
   end
 
   def destroy
+    @episode = Episode.find(params[:id])
+    @episode.destroy
+    redirect_to episodes_path
   end
 
   private

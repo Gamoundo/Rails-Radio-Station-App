@@ -1,3 +1,4 @@
 class Song < ApplicationRecord
-    has_many :episodes, class_name: "episode", foreign_key: "reference_id"
+    has_many :episodes
+    has_many :shows, through: :episodes
 end

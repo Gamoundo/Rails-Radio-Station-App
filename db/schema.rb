@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_06_13_193843) do
 
   create_table "episodes", force: :cascade do |t|
-    t.integer "song_id"
     t.integer "show_id"
     t.string "name"
     t.integer "air_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "song_id"
   end
 
   create_table "shows", force: :cascade do |t|

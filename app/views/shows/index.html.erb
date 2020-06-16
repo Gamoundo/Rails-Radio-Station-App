@@ -3,7 +3,7 @@
 
 <ul>
     <% @shows.each do |show| %>
-        <li><%= link_to show.name, song_path(show)%></li>
+        <li><%= link_to show.name, show%></li>
         <br>
     <%end%>
 </ul>
