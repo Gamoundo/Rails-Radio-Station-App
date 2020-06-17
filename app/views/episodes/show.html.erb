@@ -1,11 +1,16 @@
+
+
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Episodes", episodes_path %></li> 
+      
+    <li class="nav-item"><%= link_to "Songs", songs_path %></li>
+
+    <li class="nav-item"><%= link_to "Shows", shows_path %></li>
+  </ul>
+</nav>
+
 <h1> <%= @episode.name%></h1>
-<%= link_to "Episodes", episodes_path %> 
-<br>
-<br>    
-<%= link_to "Songs", songs_path %> 
-<br>
-<br> 
-<%= link_to "Shows", shows_path %> 
 <br>
 <br>           
  <h2> Song: <%= link_to @episode.song.name, @episode.song%></h2>
@@ -15,6 +20,8 @@
   <h2>Show: <%= link_to @episode.show.name, @episode.show %></h2>
  <br>
  <br>
- <%= button_to "Delete?", @episode, method: :delete, class: "button" %>
+ 
+    <h2><%= button_to "Delete?", @episode, method: :delete, class: "button" %></h2>
+ 
     
 
