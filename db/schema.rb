@@ -10,11 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_012853) do
+ActiveRecord::Schema.define(version: 2020_06_17_014049) do
 
   create_table "episodes", force: :cascade do |t|
     t.integer "show_id"
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "playlist_songs", force: :cascade do |t|
+    t.integer "song_id"
+    t.integer "playlist_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.integer "episode_id"
+    t.integer "playlist_song_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
