@@ -1,3 +1,33 @@
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Episodes", episodes_path %></li> 
+      
+    <li class="nav-item"><%= link_to "Songs", songs_path %></li>
+
+    <li class="nav-item"><%= link_to "Shows", shows_path %></li>
+  </ul>
+</nav>
+<br>
+
 <h1><%= @show.name %></h1>
 <br>
 <p>More to come!</p>
+<br>
+<h3>My episodes</h3>
+<br>
+<% @show.episodes.each do |episode| %>
+    <%= link_to episode.name, episode %>
+    <br>
+    <br>
+<% end %>
+<% if @show.name == "Looped Euphoria" %>
+  <audio src="/Users/akilgriff/Downloads/Life_After_Death.mp3" autoplay></audio>
+<% end %>
+
+<% if session[:status] == "peasant" %>
+    <h2>Login to change this info</h2>
+
+    
+<% end %>
+
+

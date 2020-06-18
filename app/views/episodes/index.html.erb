@@ -1,5 +1,12 @@
 <h1>All the episodes</h1>
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Songs", songs_path %></li>
 
+    <li class="nav-item"><%= link_to "Shows", shows_path %></li>
+  </ul>
+</nav>
+<br>
 <% @episodes.each do |episode|%>
 <%= link_to episode.name, episode %>
 <br>

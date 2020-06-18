@@ -1,6 +1,13 @@
 <h1>Radio Station's Music Catalog</h1>
 <br>
-
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Episodes", episodes_path %></li> 
+    
+    <li class="nav-item"><%= link_to "Shows", shows_path %></li>
+  </ul>
+</nav>
+<br>
 <ul>
     <% @songs.each do |song| %>
         <li><%= link_to song.name, song_path(song)%></li>

@@ -1,2 +1,21 @@
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Episodes", episodes_path %></li> 
+      
+    <li class="nav-item"><%= link_to "Songs", songs_path %></li>
+
+    <li class="nav-item"><%= link_to "Shows", shows_path %></li>
+  </ul>
+</nav>
+<br>
 <h1><%= @song.name %></h1>
+<br>
+<h2>Episodes this song was used on</h2>
+<% @song.episodes.each do |episode| %>
+    <%= link_to episode.name, episode %>
+    <br>
+    <br>
+<% end %>
+
+
 <p>More info about <%= @song.name%> to come</p>

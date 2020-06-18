@@ -1,5 +1,6 @@
 class EpisodesController < ApplicationController
   def index
+    
     session[:status] = "peasant"
     @episodes = Episode.all
   end
@@ -9,6 +10,7 @@ class EpisodesController < ApplicationController
   end
 
   def new
+    
     @episode = Episode.new
     @songs = Song.all
     @shows = Show.all

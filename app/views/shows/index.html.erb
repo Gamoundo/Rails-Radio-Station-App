@@ -1,6 +1,13 @@
 <h1>Radio Station's Show lineup</h1>
 <br>
-
+<nav>
+  <ul class = "nav">
+    <li class="nav-item"><%= link_to "Episodes", episodes_path %></li> 
+      
+    <li class="nav-item"><%= link_to "Songs", songs_path %></li>
+  </ul>
+</nav>
+<br>
 <ul>
     <% @shows.each do |show| %>
         <li><%= link_to show.name, show%></li>
